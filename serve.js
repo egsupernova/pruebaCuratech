@@ -4,9 +4,10 @@ const app = express()
 app.use(express.json())
 const PORT = 3000
 
-app.listen(PORT,() => {
-    console.log('running')
-})
+
+function reverseString(cad) {
+    return cad.split('').reverse().join("")
+}
 
 app.get('/reverseString/:cad', (req,res) => {
 
@@ -19,19 +20,7 @@ app.get('/reverseString/:cad', (req,res) => {
 
 })
 
-function parameters(a,b,c,d) {
-    const obj = {}
-    for (i = 0; i < arguments.length; i++) {
-        if(arguments[i]) {
-            obj[arguments[i]] = arguments[i]
-        }
-    }
-    console.log(obj)
-}
 
-function reverseString(cad) {
-    return cad.split('').reverse().join("")
-}
-
-console.log(reverseString('hello'))
-parameters(1,'jhjio',null,4,{})
+app.listen(PORT,() => {
+    console.log('running')
+})
