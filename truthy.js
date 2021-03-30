@@ -14,7 +14,8 @@ function parameters(a,b,c,d) {
     //         obj[arguments[i]] = arguments[i]
     //     }
     // }
-    console.log(obj)
+    return obj
 }
 
-parameters(1,'jhjio',0,4)
+const toObj = parameters(1,'jhjio',0,4)
+console.log(obj)
